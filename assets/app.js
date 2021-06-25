@@ -32,3 +32,20 @@ button.textContent = "Sign Up";
 
 firstChild.replaceChild(button, paras[0]);
 // firstChild.removeChild(a); // removes a tag
+
+firstChild.style.position = "absolute";
+let pos = 0;
+
+let interval = setInterval(function () 
+{
+    pos+= 100;
+    firstChild.style.left += `${pos}px`;
+}, 4000);
+
+
+let pressButton = document.getElementById("pressMe");
+
+pressButton.addEventListener("click", function (event) 
+    {
+        alert(event);
+    });
